@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 
-<%@ page import=" java.sql.Connection" %>
+<%@ page import="java.sql.Connection" %>
 <%@ page import="com.conn.DatabaseManager" %>
 
 <!DOCTYPE html>
@@ -19,7 +19,8 @@
 <body class="bg-light">
 
 <%
-Connection conn = DatabaseManager.getConn();
+DatabaseManager manager = DatabaseManager.getInstance();
+Connection conn = manager.getConn();
 out.print(conn);
 %>
     <%@ include file="navbar.jsp" %>

@@ -5,12 +5,12 @@
          version="4.0">
          
    <servlet>
-    <servlet-name>CheckConnectionServlet</servlet-name>
+    <servlet-name>CheckConnection</servlet-name>
     <servlet-class>com.conn.CheckConnectionServlet</servlet-class>
 </servlet>
 <servlet-mapping>
-    <servlet-name>CheckConnectionServlet</servlet-name>
-    <url-pattern>/CheckConnectionServlet</url-pattern>
+    <servlet-name>CheckConnection</servlet-name>
+    <url-pattern>/CheckConnection</url-pattern>
 </servlet-mapping>
 
     

@@ -12,9 +12,10 @@ public class DatabaseManager {
 	private static final String PROPERTIES_FILE = "/config.properties";
 	private static DatabaseManager instance;
 
-	private String dbUrl;
-	private String dbUser;
-	private String dbPassword;
+	private static String dbUrl;
+	private static String dbUser;
+	private static String dbPassword;
+	
 	private Connection connection;
 
 	private DatabaseManager() {
@@ -22,7 +23,7 @@ public class DatabaseManager {
 		initializeConnection();
 	}
 
-	public static synchronized DatabaseManager getInstance() {
+	public static  DatabaseManager getInstance() {
 		if (instance == null) {
 			instance = new DatabaseManager();
 		}
@@ -75,10 +76,10 @@ public class DatabaseManager {
 
 	public static Connection conn = null;
 
-	public static Connection getConn() {
+	public  Connection getConn() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "Mysql@2023");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "admin");
 
 		} catch (Exception e) {
 			e.printStackTrace();

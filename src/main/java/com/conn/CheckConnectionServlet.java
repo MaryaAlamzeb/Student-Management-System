@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/CheckConnectionServlet")
 public class CheckConnectionServlet extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		DatabaseManager dbManager = DatabaseManager.getInstance();
