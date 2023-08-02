@@ -8,7 +8,7 @@
 <title>Edit Students</title>
 </head>
 <body class="bg-light">
-<%@include file="navbar.jsp"%>
+	<%@include file="navbar.jsp"%>
 
 	<div class="container p-4">
 
@@ -53,7 +53,8 @@
 
 							</div>
 
-							<button type="submit" class="btn btn-primary col-md-12"> Update </button>
+							<button type="submit" class="btn btn-primary col-md-12">
+								Update</button>
 						</form>
 
 
